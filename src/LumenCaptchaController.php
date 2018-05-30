@@ -40,7 +40,7 @@ class LumenCaptchaController extends Controller
         $urlDomain = $request->getSchemeAndHttpHost();
         $captchaUuid = generate_uuid();
         $captchaData = [
-            'captchaUrl'=>$urlDomain.'/api/captcha-image/'.$type.'/id/'.$captchaUuid,
+            'captchaUrl'=>$urlDomain.'/api/captcha-image/'.$type.'/'.$captchaUuid,
             'captchaUuid'=>(string)$captchaUuid
         ];
         return response()->json($captchaData);
