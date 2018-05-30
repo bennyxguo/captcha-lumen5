@@ -23,10 +23,6 @@ class CaptchaServiceProvider extends ServiceProvider {
             __DIR__.'/../config/lumen-captcha.php' => config_path('lumen-captcha.php')
         ], 'config');
 
-        // HTTP routing
-        $this->app->get('/api/captcha[/{type}]', 'TriDiamond\CaptchaLumen5\LumenCaptchaController@getCaptchaInfo');
-        $this->app->get('/api/captcha-image/{type}/{captchaId}', 'TriDiamond\CaptchaLumen5\LumenCaptchaController@getCaptcha');
-
         // Validator extensions
         $this->app['validator']->extend('captcha', function($attribute, $value, $parameters)
         {
