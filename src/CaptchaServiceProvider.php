@@ -2,7 +2,7 @@
 
 namespace TriDiamond\CaptchaLumen5;
 
-use Yangbx\CaptchaLumen\Captcha;
+use TriDiamond\CaptchaLumen5\Captcha;
 use Illuminate\Support\ServiceProvider;
 
 /**
